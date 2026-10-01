@@ -1,0 +1,16 @@
+OBSERVATÓRIO GRAPROHAB — SITE COMPLETO
+Atualizado em 30/09/2026.
+
+HOSPEDAGEM
+Extraia este ZIP e envie index.html, app.js, style.css e a pasta assets para a pasta pública da sua plataforma, mantendo a estrutura. Não é necessário instalar dependências ou compilar. Funciona também em subpastas.
+
+Use uma hospedagem HTTP/HTTPS; abrir index.html diretamente pelo computador pode impedir a leitura da base.
+
+INCLUÍDO
+Base ampliada v2, registros analíticos, fontes Montserrat, biblioteca Leaflet, malha municipal simplificada do IBGE (2020), mapa azul, filtros, gráficos e rankings. Os arquivos históricos de referência permanecem em assets.
+
+MAPA
+As imagens do OpenStreetMap exigem conexão à internet. Preserve os créditos visíveis de OpenStreetMap e IBGE. Metadados e equivalências de nomes para o mapa estão em assets/mapa-fontes.json. Os limites municipais não localizam empreendimentos.
+
+ACESSO
+O acesso privado do Sites é controlado pela hospedagem e não acompanha este ZIP. Configure a proteção de acesso na sua plataforma caso queira manter o site privado.
