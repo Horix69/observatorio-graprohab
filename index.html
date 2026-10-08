@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f5f7">
+  <meta name="description" content="Observatório GRAPROHAB: pesquisa exploratória da produção habitacional, regulação urbana e agentes do território em São Paulo.">
+  <title>Observatório GRAPROHAB · Pesquisa territorial</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/leaflet/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header data-od-id="site-header">
+    <button id="menu-toggle" class="menu-toggle" aria-label="Abrir navegação" aria-controls="nav" aria-expanded="false" data-od-id="menu-toggle">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg>
+    </button>
+    <div class="brand" data-od-id="brand">
+      <span class="mark" aria-hidden="true">OG</span>
+      <div>
+        <strong>Observatório GRAPROHAB</strong>
+        <small>Produção habitacional, regulação urbana e agentes do território</small>
+      </div>
+    </div>
+    <span class="edition">SÃO PAULO · 1991—2026</span>
+  </header>
+  <div class="shell">
+    <nav id="nav" aria-label="Navegação principal" hidden data-od-id="primary-navigation"></nav>
+    <main id="app-main" data-od-id="main-content">
+      <div class="pagehead" data-od-id="page-heading">
+        <div>
+          <p class="eyebrow">Pesquisa exploratória · São Paulo</p>
+          <h1 id="title" data-od-id="page-title">Visão Geral</h1>
+          <p id="intro">Indicadores, séries históricas e recortes territoriais da base GRAPROHAB.</p>
+        </div>
+        <div id="status" role="status" aria-live="polite" hidden></div>
+      </div>
+      <section class="filters" data-od-id="research-filters">
+        <div class="filters-title">
+          <button id="filter-toggle" class="section-toggle" aria-expanded="true" aria-controls="filter-body" data-od-id="filter-toggle"><span>Recorte da pesquisa</span><span class="chevron" aria-hidden="true">⌃</span></button>
+          <button id="clear" type="button" data-od-id="clear-filters">Limpar filtros</button>
+        </div>
+        <div id="filter-body">
+          <div class="filtergrid">
+            <label data-od-id="filter-population-arrangement">Arranjo populacional<select id="ap"></select></label>
+            <label data-od-id="filter-municipality">Município<select id="city"></select></label>
+            <label data-od-id="filter-start-year">Período inicial<input id="start" type="number" min="1991" max="2026" value="1991" inputmode="numeric"></label>
+            <label data-od-id="filter-end-year">Período final<input id="end" type="number" min="1991" max="2026" value="2026" inputmode="numeric"></label>
+            <label data-od-id="filter-situation">Situação<select id="situation"></select></label>
+            <label data-od-id="filter-typology">Tipologia<select id="type"></select></label>
+            <label data-od-id="filter-owner">Proprietário normalizado<select id="owner"></select></label>
+            <label data-od-id="filter-economic-group">Grupo econômico candidato<select id="group"></select></label>
+          </div>
+          <p class="filter-note">O recorte temporal considera o ano de entrada nos protocolos, o ano do certificado nos certificados e o ano do resultado nos dispensados. Cancelados usam o ano de entrada, pois a base não registra data própria de cancelamento. Protocolamento e certificação não comprovam implantação.</p>
+          <div class="import-row" data-od-id="dataset-import">
+            <div class="import-copy">
+              <strong id="dataset-label">Base de referência GRAPROHAB</strong>
+              <small>Carregue CSV ou Excel para substituir a base da sessão. O arquivo é processado neste navegador.</small>
+            </div>
+            <div class="import-actions">
+              <input id="source-file" type="file" accept=".csv,.tsv,.xlsx,.xls" aria-label="Selecionar arquivo de dados" data-od-id="source-file">
+              <label for="source-file" class="import-trigger" data-od-id="import-file-button">Importar base</label>
+              <button id="restore-dataset" type="button" class="button" hidden data-od-id="restore-base">Restaurar base de referência</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div id="content" aria-live="polite"></div>
+      <footer data-od-id="site-footer">
+        <div>Fonte: GRAPROHAB. Protocolamento e certificação registram etapas do processo e não comprovam implantação.</div>
+        <div class="producer">Produzido por: <strong>Marcelo de Abreu Cunha</strong><br>Arquiteto e Urbanista · Mestrando em Arquitetura e Urbanismo<br>FAAC · UNESP, Bauru/SP, Brasil</div>
+        <div class="producer"><a href="assets/THIRD-PARTY-NOTICES.txt">Avisos de bibliotecas e licenças</a> · <a href="assets/leaflet/LICENSE">Licença Leaflet</a></div>
+      </footer>
+    </main>
+  </div>
+  <script src="assets/leaflet/leaflet.js"></script>
+  <script src="assets/xlsx.full.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
