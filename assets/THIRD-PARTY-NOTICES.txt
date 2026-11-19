@@ -1,0 +1,7 @@
+SheetJS Community Edition -- https://sheetjs.com/
+Copyright (C) 2012-present SheetJS LLC
+Licensed under the Apache License, Version 2.0.
+https://www.apache.org/licenses/LICENSE-2.0
+
+Bundled browser build: xlsx.full.min.js, version 0.20.3.
+Leaflet license and attribution: assets/leaflet/LICENSE.
